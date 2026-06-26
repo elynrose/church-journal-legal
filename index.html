@@ -3,314 +3,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Church Journal — Privacy & Support</title>
-  <style>
-    :root {
-      --creamy-yellow: #F8F1E1;
-      --mint-green: #EEF6F4;
-      --off-white: #F9F5F0;
-      --peach: #FBE3D9;
-      --seafoam: #E1EFEE;
-      --dusty-blue: #C1D9E0;
-      --worship-accent: #DCCAB5;
-      --notes-accent: #EACABD;
-      --text: #000000;
-      --text-soft: #333333;
-      --border: rgba(255, 255, 255, 0.9);
-      --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: var(--off-white);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    .page {
-      min-height: 100vh;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--dusty-blue) 0%, var(--seafoam) 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 1.25rem 2rem;
-    }
-
-    .header-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .app-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      border: 2px solid var(--border);
-      background: var(--off-white);
-      object-fit: cover;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.85rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-
-    header .subtitle {
-      margin: 0.35rem 0 0;
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
-
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
-    }
-
-    .section {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.35rem 1.25rem;
-      margin-bottom: 1.25rem;
-      box-shadow: var(--shadow);
-    }
-
-    .section-support {
-      background: var(--peach);
-      border-left: 4px solid var(--notes-accent);
-    }
-
-    .section-privacy {
-      background: var(--mint-green);
-      border-left: 4px solid var(--dusty-blue);
-    }
-
-    .section-body {
-      background: var(--off-white);
-    }
-
-    h2 {
-      margin: 0 0 0.85rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    h3 {
-      margin: 1.5rem 0 0.65rem;
-      font-size: 1.02rem;
-      font-weight: 700;
-    }
-
-    p {
-      margin: 0 0 0.85rem;
-      color: var(--text-soft);
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    ul {
-      margin: 0 0 0.85rem;
-      padding-left: 1.25rem;
-      color: var(--text-soft);
-    }
-
-    li {
-      margin-bottom: 0.35rem;
-    }
-
-    li strong,
-    p strong {
-      color: var(--text);
-    }
-
-    a {
-      color: var(--text);
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-color: var(--dusty-blue);
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      text-decoration-color: var(--text);
-    }
-
-    .email-link {
-      display: inline-block;
-      margin-top: 0.25rem;
-      padding: 0.55rem 0.9rem;
-      background: var(--dusty-blue);
-      border-radius: 8px;
-      text-decoration: none;
-      border: 1px solid var(--border);
-    }
-
-    .email-link:hover {
-      background: var(--seafoam);
-    }
-
-    .summary-box {
-      background: var(--creamy-yellow);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--worship-accent);
-      border-radius: 10px;
-      padding: 1rem 1.1rem;
-      margin: 0.5rem 0 1rem;
-    }
-
-    .summary-box ul {
-      margin-bottom: 0;
-    }
-
-    .category-strip {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .chip {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.55rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-    }
-
-    .chip-worship { background: var(--creamy-yellow); }
-    .chip-scripture { background: var(--mint-green); }
-    .chip-notes { background: var(--peach); }
-
-    footer {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 1.25rem 2rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-soft);
-    }
-
-    @media (max-width: 480px) {
-      header {
-        padding-top: 2rem;
-      }
-
-      .header-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      header h1 {
-        font-size: 1.55rem;
-      }
-    }
-  </style>
+  <meta name="description" content="Church Journal — record worship songs, sermon notes, and scriptures by date. Offline Bible and song library included.">
+  <title>Church Journal — Your church service companion</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="header-inner">
-        <img
-          class="app-icon"
-          src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
-          alt="Church Journal app icon"
-          width="72"
-          height="72"
-        >
-        <div>
-          <h1>Church Journal</h1>
-          <p class="subtitle">Privacy &amp; Support · Last updated March 24, 2026</p>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="section section-support" id="support">
-        <h2>Support</h2>
-        <p>Church Journal helps you record worship songs, sermon notes, and scriptures by date, with an offline Bible and song library.</p>
-        <p>For help, feedback, or questions about the app or this privacy policy:</p>
-        <p><a class="email-link" href="mailto:hello@churchjournal.app">hello@churchjournal.app</a></p>
-        <div class="category-strip" aria-hidden="true">
+  <header class="hero">
+    <nav class="site-nav" aria-label="Site">
+      <a href="privacy.html">Privacy &amp; Support</a>
+    </nav>
+    <div class="header-inner">
+      <img
+        class="app-icon"
+        src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
+        alt="Church Journal app icon"
+        width="88"
+        height="88"
+      >
+      <div>
+        <h1>Church Journal</h1>
+        <p class="tagline">Capture every service. Keep every word.</p>
+        <p class="intro">
+          A calm, offline journal for worship songs, sermon notes, and scriptures —
+          organized by date and service time, with a built-in Bible and song library.
+        </p>
+        <div class="chip-row" aria-hidden="true">
           <span class="chip chip-worship">Worship</span>
           <span class="chip chip-scripture">Scriptures</span>
           <span class="chip chip-notes">Notes</span>
         </div>
-      </section>
+      </div>
+    </div>
+  </header>
 
-      <section class="section section-privacy" id="privacy">
-        <h2>Privacy Policy</h2>
-        <p>Church Journal (“the App”) is a personal journal for worship songs, sermon notes, and scriptures. This policy explains how we handle information when you use the App.</p>
-      </section>
+  <main>
+    <h2 class="section-title">Everything in one place</h2>
+    <p class="section-lead">
+      Church Journal is built around how you actually experience church —
+      morning or evening, songs sung, scriptures opened, and notes taken.
+    </p>
 
-      <section class="section section-body">
-        <h3>Summary</h3>
-        <div class="summary-box">
-          <ul>
-            <li>Your journal entries are stored <strong>only on your device</strong>.</li>
-            <li>We do <strong>not</strong> require an account.</li>
-            <li>We do <strong>not</strong> sell your data.</li>
-            <li>We do <strong>not</strong> use analytics or advertising SDKs in the App.</li>
-          </ul>
-        </div>
+    <div class="feature-grid">
+      <article class="feature-card worship">
+        <h3>Worship</h3>
+        <p>Log every song sung in the service. Add titles and keys from the built-in library, or build your AM and PM set lists for the day.</p>
+      </article>
+      <article class="feature-card scripture">
+        <h3>Scriptures</h3>
+        <p>Record sermon title, speaker, and scripture references. Tap any reference to jump straight into the Bible reader.</p>
+      </article>
+      <article class="feature-card notes">
+        <h3>Notes</h3>
+        <p>Take multi-page sermon notes with swipe navigation. Add pages as the message unfolds — nothing gets lost.</p>
+      </article>
+      <article class="feature-card library">
+        <h3>Songs &amp; Bible</h3>
+        <p>Search 500+ worship songs offline. Read the full Bible with reference search — no internet required.</p>
+      </article>
+    </div>
 
-        <h3>Information stored on your device</h3>
-        <p>The App stores the following locally on your phone or tablet:</p>
-        <ul>
-          <li>Journal entries (worship songs, notes, and scripture references)</li>
-          <li>Dates and service times (AM/PM) associated with entries</li>
-          <li>Your custom song additions or edits, if any</li>
-        </ul>
-        <p>This data stays on your device unless you back up your device through your operating system’s backup service (for example, Google Backup or iCloud). We do not receive or access that backup data.</p>
+    <section class="screenshot-block">
+      <h3>Worship — track every song</h3>
+      <p>See what was sung at each service, with musical keys at a glance.</p>
+      <div class="screenshot-row">
+        <figure class="phone-frame">
+          <img src="images/worship.png" alt="Worship tab showing songs listed for a PM service" width="280" height="560">
+        </figure>
+      </div>
+    </section>
 
-        <h3>Information we do not collect</h3>
-        <p>We do not collect, transmit, or store on our servers:</p>
-        <ul>
-          <li>Your name, email, or contact details</li>
-          <li>Your journal content</li>
-          <li>Location data</li>
-          <li>Usage analytics</li>
-        </ul>
+    <section class="screenshot-block">
+      <h3>Scriptures — sermon details &amp; references</h3>
+      <p>Capture the sermon title, who preached, and the scriptures covered.</p>
+      <div class="screenshot-row">
+        <figure class="phone-frame">
+          <img src="images/scriptures.png" alt="Scriptures tab with sermon and preached by fields" width="280" height="560">
+        </figure>
+      </div>
+    </section>
 
-        <h3>Notifications</h3>
-        <p>The App can send optional local reminders (morning and evening) to encourage journaling and scripture reading. Notification permission is requested by your device’s operating system. You can disable notifications at any time in your device settings. Reminder scheduling uses your device’s local timezone; that information is not sent to us.</p>
+    <section class="screenshot-block">
+      <h3>Notes — multi-page journaling</h3>
+      <p>Swipe between note pages and add more as you need them.</p>
+      <div class="screenshot-row">
+        <figure class="phone-frame">
+          <img src="images/notes.png" alt="Notes tab with paginated sermon notes" width="280" height="560">
+        </figure>
+      </div>
+    </section>
 
-        <h3>Bundled content</h3>
-        <p>The App includes an offline Bible and a worship song library bundled in the application. Reading or searching that content does not send information to us.</p>
+    <section class="screenshot-block">
+      <h3>Song library — search &amp; add</h3>
+      <p>Browse and search hundreds of hymns and worship songs. Add any song to today’s journal with one tap.</p>
+      <div class="screenshot-row">
+        <figure class="phone-frame">
+          <img src="images/songs.png" alt="Songs library with search and song list" width="280" height="560">
+        </figure>
+      </div>
+    </section>
 
-        <h3>Third-party services</h3>
-        <p>The App does not integrate third-party analytics, advertising, or social login services. App store providers (Google Play, Apple App Store) may collect information according to their own policies when you download or update the App.</p>
+    <section class="screenshot-block">
+      <h3>Bible — read offline</h3>
+      <p>Full Bible built in. Search by reference or text, and add verses to your journal.</p>
+      <div class="screenshot-row">
+        <figure class="phone-frame">
+          <img src="images/bible.png" alt="Bible reader showing Genesis chapter 1" width="280" height="560">
+        </figure>
+      </div>
+    </section>
 
-        <h3>Children’s privacy</h3>
-        <p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    <section class="cta-box">
+      <h2>Private by design</h2>
+      <p>Your journal stays on your device. No account required. Optional morning and evening reminders to keep you in the Word.</p>
+      <p><a class="email-link" href="mailto:hello@churchjournal.app">hello@churchjournal.app</a></p>
+      <p style="margin-top:1rem;font-size:0.9rem;"><a href="privacy.html">Privacy &amp; Support</a></p>
+    </section>
+  </main>
 
-        <h3>Data retention and deletion</h3>
-        <p>Because data is stored on your device, you can delete it by clearing the App’s data in your device settings or uninstalling the App.</p>
-
-        <h3>Changes to this policy</h3>
-        <p>We may update this policy from time to time. The date at the top of this page will change when we do. Continued use of the App after changes means you accept the updated policy.</p>
-      </section>
-    </main>
-
-    <footer>
-      Church Journal · In The Sunshine
-    </footer>
-  </div>
+  <footer>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy &amp; Support</a>
+      <a href="mailto:hello@churchjournal.app">Contact</a>
+    </nav>
+    <p>Church Journal · In The Sunshine</p>
+  </footer>
 </body>
 </html>

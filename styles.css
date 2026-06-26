@@ -1,0 +1,360 @@
+:root {
+  --creamy-yellow: #F8F1E1;
+  --mint-green: #EEF6F4;
+  --off-white: #F9F5F0;
+  --peach: #FBE3D9;
+  --seafoam: #E1EFEE;
+  --dusty-blue: #C1D9E0;
+  --worship-accent: #DCCAB5;
+  --notes-accent: #EACABD;
+  --text: #000000;
+  --text-soft: #333333;
+  --border: rgba(255, 255, 255, 0.9);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--off-white);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--dusty-blue);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+.site-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+}
+
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+header.hero {
+  background: linear-gradient(135deg, var(--dusty-blue) 0%, var(--seafoam) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.25rem 3rem;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.app-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--border);
+  background: var(--off-white);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+header .tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+header .intro {
+  margin: 0.75rem 0 0;
+  max-width: 540px;
+  font-size: 1rem;
+  color: var(--text-soft);
+}
+
+.chip-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.chip-worship { background: var(--creamy-yellow); }
+.chip-scripture { background: var(--mint-green); }
+.chip-notes { background: var(--peach); }
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.section-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.section-lead {
+  margin: 0 0 1.5rem;
+  color: var(--text-soft);
+  max-width: 640px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.feature-card.worship {
+  background: var(--creamy-yellow);
+  border-left: 4px solid var(--worship-accent);
+}
+
+.feature-card.scripture {
+  background: var(--mint-green);
+  border-left: 4px solid var(--dusty-blue);
+}
+
+.feature-card.notes {
+  background: var(--peach);
+  border-left: 4px solid var(--notes-accent);
+}
+
+.feature-card.library {
+  background: var(--seafoam);
+  border-left: 4px solid var(--dusty-blue);
+}
+
+.feature-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.screenshot-block {
+  margin-bottom: 2.5rem;
+}
+
+.screenshot-block h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.screenshot-block p {
+  margin: 0 0 1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.phone-frame {
+  display: inline-block;
+  max-width: 280px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  background: #fff;
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screenshot-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--creamy-yellow) 0%, var(--peach) 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.cta-box h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.cta-box p {
+  margin: 0 0 1rem;
+  color: var(--text-soft);
+}
+
+.email-link {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  background: var(--dusty-blue);
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.email-link:hover {
+  background: var(--seafoam);
+}
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+footer nav {
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  text-decoration: none;
+}
+
+/* Privacy page extras */
+.section {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.35rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.section-support {
+  background: var(--peach);
+  border-left: 4px solid var(--notes-accent);
+}
+
+.section-privacy {
+  background: var(--mint-green);
+  border-left: 4px solid var(--dusty-blue);
+}
+
+.section-body {
+  background: var(--off-white);
+}
+
+.section h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.section h3 {
+  margin: 1.5rem 0 0.65rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.section p {
+  margin: 0 0 0.85rem;
+  color: var(--text-soft);
+}
+
+.section ul {
+  margin: 0 0 0.85rem;
+  padding-left: 1.25rem;
+  color: var(--text-soft);
+}
+
+.summary-box {
+  background: var(--creamy-yellow);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--worship-accent);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.summary-box ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .chip-row {
+    justify-content: center;
+  }
+
+  .phone-frame {
+    max-width: 240px;
+  }
+}
