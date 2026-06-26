@@ -1,8 +1,9 @@
 # Church Journal — Legal Pages
 
-Public pages for the Church Journal mobile app.
+Public privacy and support page for the Church Journal mobile app.
 
-- [Privacy Policy](https://elynrose.github.io/church-journal-legal/privacy.html)
-- [Support](https://elynrose.github.io/church-journal-legal/support.html)
+**URL:** https://elynrose.github.io/church-journal-legal/
+
+Use this URL for both the privacy policy and support fields in Google Play and the App Store.
 
 Hosted with [GitHub Pages](https://pages.github.com/).
