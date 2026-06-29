@@ -4,27 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Church Journal — Privacy & Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="hero">
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html">Home</a>
-    </nav>
-    <div class="header-inner">
-      <img
-        class="app-icon"
-        src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
-        alt="Church Journal app icon"
-        width="88"
-        height="88"
-      >
-      <div>
-        <h1>Church Journal</h1>
-        <p class="tagline">Privacy &amp; Support · Last updated March 24, 2026</p>
-      </div>
+<body class="page-legal">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <img
+          class="brand-icon"
+          src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
+          alt=""
+          width="36"
+          height="36"
+        >
+        <span>Church Journal</span>
+      </a>
+      <nav class="topnav" aria-label="Site">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#screenshots">Screenshots</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="topnav-cta" href="mailto:hello@churchjournal.app">Contact</a>
+      </nav>
     </div>
   </header>
+
+  <section class="hero-split">
+    <div class="hero-copy">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy &amp; Support</h1>
+      <p class="hero-lead">Last updated March 24, 2026. Questions? Email us anytime.</p>
+    </div>
+  </section>
 
   <main>
     <section class="section section-support" id="support">
@@ -33,9 +46,9 @@
       <p>For help, feedback, or questions about the app or this privacy policy:</p>
       <p><a class="email-link" href="mailto:hello@churchjournal.app">hello@churchjournal.app</a></p>
       <div class="chip-row" aria-hidden="true">
-        <span class="chip chip-worship">Worship</span>
-        <span class="chip chip-scripture">Scriptures</span>
-        <span class="chip chip-notes">Notes</span>
+        <span class="chip">Worship</span>
+        <span class="chip">Scriptures</span>
+        <span class="chip">Notes</span>
       </div>
     </section>
 
@@ -93,13 +106,18 @@
     </section>
   </main>
 
-  <footer>
-    <nav aria-label="Footer">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy &amp; Support</a>
-      <a href="mailto:hello@churchjournal.app">Contact</a>
-    </nav>
-    <p>Church Journal · In The Sunshine</p>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-brand">
+        <strong>Church Journal</strong>
+        <span>In The Sunshine</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy &amp; Support</a>
+        <a href="mailto:hello@churchjournal.app">Contact</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

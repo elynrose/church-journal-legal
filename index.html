@@ -5,142 +5,217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Church Journal — record worship songs, sermon notes, and scriptures by date. Offline Bible and song library included.">
   <title>Church Journal — Your church service companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <nav class="site-nav" aria-label="Site">
-      <a href="privacy.html">Privacy &amp; Support</a>
-    </nav>
-    <div class="cover-wrap">
-      <img
-        class="cover-image"
-        src="images/cover.jpg"
-        alt="Church Journal — Your songs. Your faith. Anywhere you worship."
-        width="1200"
-        height="675"
-        onerror="this.hidden=true; document.getElementById('hero-fallback').hidden=false;"
-      >
-      <div id="hero-fallback" class="header-inner" hidden>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
         <img
-          class="app-icon"
+          class="brand-icon"
           src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
-          alt="Church Journal app icon"
-          width="88"
-          height="88"
+          alt=""
+          width="36"
+          height="36"
         >
-        <div>
-          <h1>Church Journal</h1>
-          <p class="tagline">Your songs. Your faith. Anywhere you worship.</p>
-          <p class="intro">
-            A calm, offline journal for worship songs, sermon notes, and scriptures —
-            organized by date and service time, with a built-in Bible and song library.
-          </p>
-        </div>
-      </div>
+        <span>Church Journal</span>
+      </a>
+      <nav class="topnav" aria-label="Site">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="topnav-cta" href="mailto:hello@churchjournal.app">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <h2 class="section-title">Everything in one place</h2>
-    <p class="section-lead">
-      Church Journal is built around how you actually experience church —
-      morning or evening, songs sung, scriptures opened, and notes taken.
-    </p>
-
-    <div class="feature-grid">
-      <article class="feature-card worship">
-        <h3>Worship</h3>
-        <p>Log every song sung in the service. Add titles and keys from the built-in library, or build your AM and PM set lists for the day.</p>
-      </article>
-      <article class="feature-card scripture">
-        <h3>Scriptures</h3>
-        <p>Record sermon title, speaker, and scripture references. Tap any reference to jump straight into the Bible reader.</p>
-      </article>
-      <article class="feature-card notes">
-        <h3>Notes</h3>
-        <p>Take multi-page sermon notes with swipe navigation. Add pages as the message unfolds — nothing gets lost.</p>
-      </article>
-      <article class="feature-card library">
-        <h3>Songs &amp; Bible</h3>
-        <p>Search 500+ worship songs offline. Read the full Bible with reference search — no internet required.</p>
-      </article>
-    </div>
-
-    <section class="screenshots-section" aria-labelledby="screenshots-heading">
-      <h2 id="screenshots-heading" class="section-title">See the app</h2>
-      <p class="section-lead">
-        A calm journal for worship, scriptures, notes, songs, and Bible reading — all offline on your phone.
+  <section class="hero-split">
+    <div class="hero-copy">
+      <p class="eyebrow">In The Sunshine</p>
+      <h1>Your songs. Your faith.<br>Anywhere you worship.</h1>
+      <p class="hero-lead">
+        A private, offline journal for worship set lists, sermon notes, and
+        scriptures — organized by date and service, with a built-in Bible and
+        500+ song library.
       </p>
+      <div class="hero-pills">
+        <span>Offline</span>
+        <span>No account</span>
+        <span>AM &amp; PM services</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img
+        class="hero-cover"
+        src="images/cover.jpg"
+        alt="Church Journal promotional image showing the app in worship"
+        width="640"
+        height="480"
+        onerror="this.hidden=true; document.getElementById('hero-fallback').hidden=false;"
+      >
+      <div id="hero-fallback" class="hero-fallback" hidden>
+        <img
+          src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
+          alt="Church Journal app icon"
+          width="96"
+          height="96"
+        >
+        <p>Church Journal</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="screenshot-grid">
-        <figure class="screenshot-card">
-          <div class="phone-frame">
-            <img src="images/worship.png" alt="Worship tab showing songs listed for a PM service" width="280" height="560" loading="lazy">
+  <section class="trust-band" aria-label="Highlights">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <strong>500+</strong>
+        <span>Worship songs</span>
+      </div>
+      <div class="trust-item">
+        <strong>Full Bible</strong>
+        <span>Offline reader</span>
+      </div>
+      <div class="trust-item">
+        <strong>Private</strong>
+        <span>On your device</span>
+      </div>
+      <div class="trust-item">
+        <strong>Free</strong>
+        <span>No subscription</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="features" class="block">
+      <div class="block-head">
+        <p class="eyebrow">Built for Sunday</p>
+        <h2>Everything you need in one calm app</h2>
+        <p class="block-lead">
+          Church Journal mirrors how you actually experience worship — morning or
+          evening, songs sung, scriptures opened, and notes taken.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="bento-card bento-wide worship">
+          <span class="bento-icon" aria-hidden="true">♪</span>
+          <h3>Worship</h3>
+          <p>Log every song sung in the service. Build AM and PM set lists with titles and keys from the built-in library.</p>
+        </article>
+        <article class="bento-card scripture">
+          <span class="bento-icon" aria-hidden="true">✦</span>
+          <h3>Scriptures</h3>
+          <p>Record sermon title, speaker, and references. Tap any verse to open the Bible reader.</p>
+        </article>
+        <article class="bento-card notes">
+          <span class="bento-icon" aria-hidden="true">✎</span>
+          <h3>Notes</h3>
+          <p>Multi-page sermon notes with stylus support and swipe navigation between pages.</p>
+        </article>
+        <article class="bento-card library">
+          <span class="bento-icon" aria-hidden="true">☰</span>
+          <h3>Songs &amp; Bible</h3>
+          <p>Search hymns offline. Read and search the full Bible without an internet connection.</p>
+        </article>
+        <article class="bento-card bento-wide photos">
+          <span class="bento-icon" aria-hidden="true">◫</span>
+          <h3>Photos &amp; backup</h3>
+          <p>Capture service moments in a photo gallery. Export and restore your journal with CSV backup.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="screenshots" class="block block-dark">
+      <div class="block-head block-head-light">
+        <p class="eyebrow eyebrow-light">See the app</p>
+        <h2>A journal that stays out of your way</h2>
+        <p class="block-lead block-lead-light">
+          Soft pastels, clear typography, and tabs for Home, Songs, Bible, Photos, and Settings.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-card">
+          <div class="device">
+            <img src="images/worship.png" alt="Worship tab showing songs for a PM service" loading="lazy">
           </div>
           <figcaption>
-            <strong>Worship</strong>
-            <span>Track every song sung, with keys at a glance.</span>
+            <h3>Worship</h3>
+            <p>Track every song sung, with keys at a glance.</p>
           </figcaption>
         </figure>
 
-        <figure class="screenshot-card">
-          <div class="phone-frame">
-            <img src="images/scriptures.png" alt="Scriptures tab with sermon and preached by fields" width="280" height="560" loading="lazy">
+        <figure class="gallery-card">
+          <div class="device">
+            <img src="images/scriptures.png" alt="Scriptures tab with sermon details" loading="lazy">
           </div>
           <figcaption>
-            <strong>Scriptures</strong>
-            <span>Sermon title, speaker, and scripture references.</span>
+            <h3>Scriptures</h3>
+            <p>Sermon title, speaker, and scripture references.</p>
           </figcaption>
         </figure>
 
-        <figure class="screenshot-card">
-          <div class="phone-frame">
-            <img src="images/notes.png" alt="Notes tab with paginated sermon notes" width="280" height="560" loading="lazy">
+        <figure class="gallery-card">
+          <div class="device">
+            <img src="images/notes.png" alt="Notes tab with paginated sermon notes" loading="lazy">
           </div>
           <figcaption>
-            <strong>Notes</strong>
-            <span>Multi-page sermon notes with swipe navigation.</span>
+            <h3>Notes</h3>
+            <p>Multi-page notes with handwriting and text.</p>
           </figcaption>
         </figure>
 
-        <figure class="screenshot-card">
-          <div class="phone-frame">
-            <img src="images/songs.png" alt="Songs library with search and song list" width="280" height="560" loading="lazy">
+        <figure class="gallery-card">
+          <div class="device">
+            <img src="images/songs.png" alt="Songs library with search" loading="lazy">
           </div>
           <figcaption>
-            <strong>Song library</strong>
-            <span>Search hundreds of hymns and worship songs.</span>
+            <h3>Song library</h3>
+            <p>Hundreds of hymns and worship songs to search.</p>
           </figcaption>
         </figure>
 
-        <figure class="screenshot-card">
-          <div class="phone-frame">
-            <img src="images/bible.png" alt="Bible reader showing Genesis chapter 1" width="280" height="560" loading="lazy">
+        <figure class="gallery-card gallery-card-featured">
+          <div class="device">
+            <img src="images/bible.png" alt="Bible reader showing Genesis" loading="lazy">
           </div>
           <figcaption>
-            <strong>Bible</strong>
-            <span>Full offline Bible with reference search.</span>
+            <h3>Bible</h3>
+            <p>Full offline Bible with reference search and verse highlighting.</p>
           </figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="cta-box">
-      <h2>Private by design</h2>
-      <p>Your journal stays on your device. No account required. Optional morning and evening reminders to keep you in the Word.</p>
-      <p><a class="email-link" href="mailto:hello@churchjournal.app">hello@churchjournal.app</a></p>
-      <p style="margin-top:1rem;font-size:0.9rem;"><a href="privacy.html">Privacy &amp; Support</a></p>
+    <section class="block cta-panel">
+      <div class="cta-inner">
+        <h2>Private by design</h2>
+        <p>
+          Your journal stays on your device. No account required. Optional morning
+          and evening reminders to keep you in the Word.
+        </p>
+        <a class="btn btn-primary" href="mailto:hello@churchjournal.app">hello@churchjournal.app</a>
+        <p class="cta-sub"><a href="privacy.html">Read our privacy policy</a></p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <nav aria-label="Footer">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy &amp; Support</a>
-      <a href="mailto:hello@churchjournal.app">Contact</a>
-    </nav>
-    <p>Church Journal · In The Sunshine</p>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-brand">
+        <strong>Church Journal</strong>
+        <span>In The Sunshine</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy &amp; Support</a>
+        <a href="mailto:hello@churchjournal.app">Contact</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
