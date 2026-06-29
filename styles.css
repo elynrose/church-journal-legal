@@ -59,9 +59,27 @@ a:hover {
 }
 
 header.hero {
-  background: linear-gradient(135deg, var(--dusty-blue) 0%, var(--seafoam) 100%);
+  background: var(--off-white);
   border-bottom: 1px solid var(--border);
-  padding: 1rem 1.25rem 3rem;
+  padding: 1rem 1.25rem 2rem;
+}
+
+.cover-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#hero-fallback {
+  padding-top: 0.5rem;
+}
+
+.cover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
 }
 
 .header-inner {
@@ -190,6 +208,40 @@ main {
 
 .screenshot-block {
   margin-bottom: 2.5rem;
+}
+
+.screenshots-section {
+  margin-bottom: 2.5rem;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.screenshot-card {
+  margin: 0;
+  text-align: center;
+}
+
+.screenshot-card .phone-frame {
+  margin: 0 auto;
+}
+
+.screenshot-card figcaption {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.screenshot-card figcaption strong {
+  color: var(--text);
+  font-size: 1rem;
 }
 
 .screenshot-block h3 {
@@ -355,6 +407,17 @@ footer nav a {
   }
 
   .phone-frame {
-    max-width: 240px;
+    max-width: 220px;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
   }
 }

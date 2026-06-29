@@ -12,25 +12,30 @@
     <nav class="site-nav" aria-label="Site">
       <a href="privacy.html">Privacy &amp; Support</a>
     </nav>
-    <div class="header-inner">
+    <div class="cover-wrap">
       <img
-        class="app-icon"
-        src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
-        alt="Church Journal app icon"
-        width="88"
-        height="88"
+        class="cover-image"
+        src="images/cover.png"
+        alt="Church Journal — Your songs. Your faith. Anywhere you worship."
+        width="1200"
+        height="675"
+        onerror="this.hidden=true; document.getElementById('hero-fallback').hidden=false;"
       >
-      <div>
-        <h1>Church Journal</h1>
-        <p class="tagline">Capture every service. Keep every word.</p>
-        <p class="intro">
-          A calm, offline journal for worship songs, sermon notes, and scriptures —
-          organized by date and service time, with a built-in Bible and song library.
-        </p>
-        <div class="chip-row" aria-hidden="true">
-          <span class="chip chip-worship">Worship</span>
-          <span class="chip chip-scripture">Scriptures</span>
-          <span class="chip chip-notes">Notes</span>
+      <div id="hero-fallback" class="header-inner" hidden>
+        <img
+          class="app-icon"
+          src="https://raw.githubusercontent.com/elynrose/daily_light_journal/master/assets/app_icon.png"
+          alt="Church Journal app icon"
+          width="88"
+          height="88"
+        >
+        <div>
+          <h1>Church Journal</h1>
+          <p class="tagline">Your songs. Your faith. Anywhere you worship.</p>
+          <p class="intro">
+            A calm, offline journal for worship songs, sermon notes, and scriptures —
+            organized by date and service time, with a built-in Bible and song library.
+          </p>
         </div>
       </div>
     </div>
@@ -62,52 +67,61 @@
       </article>
     </div>
 
-    <section class="screenshot-block">
-      <h3>Worship — track every song</h3>
-      <p>See what was sung at each service, with musical keys at a glance.</p>
-      <div class="screenshot-row">
-        <figure class="phone-frame">
-          <img src="images/worship.png" alt="Worship tab showing songs listed for a PM service" width="280" height="560">
-        </figure>
-      </div>
-    </section>
+    <section class="screenshots-section" aria-labelledby="screenshots-heading">
+      <h2 id="screenshots-heading" class="section-title">See the app</h2>
+      <p class="section-lead">
+        A calm journal for worship, scriptures, notes, songs, and Bible reading — all offline on your phone.
+      </p>
 
-    <section class="screenshot-block">
-      <h3>Scriptures — sermon details &amp; references</h3>
-      <p>Capture the sermon title, who preached, and the scriptures covered.</p>
-      <div class="screenshot-row">
-        <figure class="phone-frame">
-          <img src="images/scriptures.png" alt="Scriptures tab with sermon and preached by fields" width="280" height="560">
+      <div class="screenshot-grid">
+        <figure class="screenshot-card">
+          <div class="phone-frame">
+            <img src="images/worship.png" alt="Worship tab showing songs listed for a PM service" width="280" height="560" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Worship</strong>
+            <span>Track every song sung, with keys at a glance.</span>
+          </figcaption>
         </figure>
-      </div>
-    </section>
 
-    <section class="screenshot-block">
-      <h3>Notes — multi-page journaling</h3>
-      <p>Swipe between note pages and add more as you need them.</p>
-      <div class="screenshot-row">
-        <figure class="phone-frame">
-          <img src="images/notes.png" alt="Notes tab with paginated sermon notes" width="280" height="560">
+        <figure class="screenshot-card">
+          <div class="phone-frame">
+            <img src="images/scriptures.png" alt="Scriptures tab with sermon and preached by fields" width="280" height="560" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Scriptures</strong>
+            <span>Sermon title, speaker, and scripture references.</span>
+          </figcaption>
         </figure>
-      </div>
-    </section>
 
-    <section class="screenshot-block">
-      <h3>Song library — search &amp; add</h3>
-      <p>Browse and search hundreds of hymns and worship songs. Add any song to today’s journal with one tap.</p>
-      <div class="screenshot-row">
-        <figure class="phone-frame">
-          <img src="images/songs.png" alt="Songs library with search and song list" width="280" height="560">
+        <figure class="screenshot-card">
+          <div class="phone-frame">
+            <img src="images/notes.png" alt="Notes tab with paginated sermon notes" width="280" height="560" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Notes</strong>
+            <span>Multi-page sermon notes with swipe navigation.</span>
+          </figcaption>
         </figure>
-      </div>
-    </section>
 
-    <section class="screenshot-block">
-      <h3>Bible — read offline</h3>
-      <p>Full Bible built in. Search by reference or text, and add verses to your journal.</p>
-      <div class="screenshot-row">
-        <figure class="phone-frame">
-          <img src="images/bible.png" alt="Bible reader showing Genesis chapter 1" width="280" height="560">
+        <figure class="screenshot-card">
+          <div class="phone-frame">
+            <img src="images/songs.png" alt="Songs library with search and song list" width="280" height="560" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Song library</strong>
+            <span>Search hundreds of hymns and worship songs.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <div class="phone-frame">
+            <img src="images/bible.png" alt="Bible reader showing Genesis chapter 1" width="280" height="560" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Bible</strong>
+            <span>Full offline Bible with reference search.</span>
+          </figcaption>
         </figure>
       </div>
     </section>
